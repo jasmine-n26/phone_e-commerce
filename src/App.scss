@@ -1,0 +1,146 @@
+// styling of site
+  $mainBlue:#2a2a72;
+  $lightBlue:#009ffd;
+  $mainWhite:#f3f3f3;
+  $mainDark:#232528;
+  $mainYellow:#ffa400;
+
+
+/* fonts */
+@font-face {
+  font-family: 'shabnam';
+  src: local('shabnam'), url(./components/fonts/shabnam/Shabnam.ttf) format('truetype');
+}
+/* genaral setting */
+
+body{
+  font-family: 'shabnam' !important;
+  background: $mainWhite !important;
+  color: $mainDark !important;
+}
+.text-title{
+  font-family: 'shabnam';
+}
+
+.text-blue{
+  color: $mainBlue;
+}
+.text-bright{
+  color: $lightBlue;
+}
+.bluebutton{
+  background: transparent;
+  border:0.05rem solid $lightBlue;
+  color: $lightBlue;
+  border-radius: 0.5rem;
+  padding:0.2rem 0.5rem;
+  cursor:pointer;
+  margin:0.2 rem 0.5rem  0.2rem 0;
+  transition:all 0.5s ease-in-out;
+  &:hover{
+      background:$lightBlue;
+      color:#2a2a72;
+  }
+  &:focus{
+      outline:none;
+  }
+}
+
+.mynav{
+  background-color: $mainBlue !important;
+  .navlink{
+    color: $mainWhite !important;
+  }
+
+
+}
+//product
+.productwapper{
+  .card{
+    border-color: transparent;
+    transition: all 0.5s linear;
+  }
+  .card-footer{
+    background: transparent;
+    border-top: transparent;
+    transition: all 0.5s linear;
+  }
+  
+  &:hover{ 
+    .card-footer{
+      background:rgba(247,247,247,247) ;
+    }
+    .card{
+      border:0.4rem solid rgba(0,0,0,0.2);
+      box-shadow:2px 2px 5px 0px rgba(0,0,0,0.2);
+    }
+  }
+  
+  .img-container{
+    position: relative;
+    overflow: hidden;
+  }
+  .img-container:hover .card-img-top{
+    transform: scale(1.2);
+  }
+  .card-img-top{
+    transition: all 0.5s linear;
+  }
+  .cart-btn{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0.2rem 0.4rem;
+    background: $lightBlue;
+    border: none;
+    color: $mainWhite;
+    border-radius: 0.5rem 0 0 0;
+    transform: translate(100%, 100%);
+    transition: all 0.5s linear;
+    &:hover{
+      color: $mainBlue;
+      cursor: pointer;
+    }
+  }
+  .img-container:hover .cart-btn{
+    transform: translate(0,0);
+  }
+}
+
+// modal
+
+
+.modal-container{
+  position: fixed;
+  top:0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  #modal1{
+    background: $mainWhite;
+  }
+}
+
+
+//cart item
+.btn-black{
+  background: transparent;
+  font-size: 0.8rem !important;
+  color: $mainDark;
+  border-radius: 0 !important;
+  border: 0.1rem solid $mainDark !important;
+  &:hover{
+    background: $mainDark !important;
+    color: $mainWhite !important;
+  }
+}
+
+.cart-icon{
+  cursor: pointer;
+  font-size: 0.2rem;
+  color: $mainYellow;
+}
